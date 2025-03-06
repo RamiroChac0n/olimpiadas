@@ -13,18 +13,26 @@ import java.util.concurrent.Semaphore;
  */
 public class CarreraOlimpica {
     public static void main(String[] args) throws InterruptedException {
+        
+        Ventana ventana = new Ventana();
+        ventana.setVisible(true);
+        ventana.setLocationRelativeTo(null);
+        
         Semaphore semaforo = new Semaphore(0);
 
-        Corredor c1 = new Corredor(semaforo, "Atleta 1");
-        Corredor c2 = new Corredor(semaforo, "Atleta 2");
-        Corredor c3 = new Corredor(semaforo, "Atleta 3");
+        Corredor c1 = new Corredor(semaforo, "Corredor A", ventana);
+        Corredor c2 = new Corredor(semaforo, "Corredor B", ventana);
+        Corredor c3 = new Corredor(semaforo, "Corredor C", ventana);
+        Corredor c4 = new Corredor(semaforo, "Corredor D", ventana);
 
         c1.start();
         c2.start();
         c3.start();
+        c4.start();
 
         Thread.sleep(3000);
-        System.out.println("🔥 ¡Pistoletazo de salida! 🔥");
-        semaforo.release(3);
+        System.out.println("¡¡¡ CORRAN !!!");
+        System.out.println("Orden de llegada: ");
+        semaforo.release(4);        
     }
 }

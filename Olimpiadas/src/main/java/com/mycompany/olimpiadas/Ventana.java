@@ -27,21 +27,47 @@ public class Ventana extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton1 = new javax.swing.JButton();
-
-        jButton1.setText("jButton1");
+        corredorA = new javax.swing.JLabel();
+        corredorB = new javax.swing.JLabel();
+        corredorC = new javax.swing.JLabel();
+        corredorD = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(500, 250));
+
+        corredorA.setText("Corredor A");
+
+        corredorB.setText("Corredor B");
+
+        corredorC.setText("Corredor C");
+
+        corredorD.setText("Corredor D");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(corredorA)
+                    .addComponent(corredorB)
+                    .addComponent(corredorC)
+                    .addComponent(corredorD))
+                .addContainerGap(335, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(corredorA)
+                .addGap(33, 33, 33)
+                .addComponent(corredorB)
+                .addGap(38, 38, 38)
+                .addComponent(corredorC)
+                .addGap(38, 38, 38)
+                .addComponent(corredorD)
+                .addContainerGap(121, Short.MAX_VALUE))
         );
 
         pack();
@@ -83,6 +109,9 @@ public class Ventana extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    public javax.swing.JLabel corredorA;
+    public javax.swing.JLabel corredorB;
+    public javax.swing.JLabel corredorC;
+    public javax.swing.JLabel corredorD;
     // End of variables declaration//GEN-END:variables
 }
